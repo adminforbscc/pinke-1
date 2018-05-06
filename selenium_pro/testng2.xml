@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="liudao test-suite-2" >
+	<parameter name="url" value="https://www.baidu.com" />
+	<parameter name="jdbc_user" value="root" />
+	<listeners>
+		<listener class-name="com.liudao.listeners.MyTestListener" />
+	</listeners>
+	<test name="liudao test-02">
+		<packages>
+			<package name="com.liudao.testdemo" >
+				<!-- <exclude name="com.liudao.testdemo">
+					<classes>
+						<class name="com.liudao.testdemo.Demo01" />
+					</classes>
+				</exclude> -->
+			</package>
+		</packages>
+	</test>
+</suite>

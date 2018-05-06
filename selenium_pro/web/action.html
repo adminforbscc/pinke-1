@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+	window.onload = function(){
+		log_form = document.getElementById("log_form");
+		document.getElementById("log").onmouseover = function(){
+			setTimeout("log_form.style.display = \"block\";",2000);
+			
+		};	
+		/* log_form.onmouseout = function(){
+			log_form.style.display = "none";
+		}; */
+	};
+</script>
+<style type="text/css">
+	div.log{
+		border: 1px solid;
+		width:40px;
+	}
+	div.log_form{
+		border:1px solid;
+		width: 400px;
+		height: 200px;
+		display:none;
+	}
+</style>
+<title>鼠标行为</title>
+</head>
+<body>
+	<div id="log" class="log">登录</div>
+	<div id="log_form" class="log_form">
+		<label>用户名</label>
+		<input type="text" name="username" />
+	</div>
+</body>
+</html>

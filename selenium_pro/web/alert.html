@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("alert_btn").onclick = function(){
+			setTimeout("alert('你点击了警告框按钮！');",2000);
+		};
+		document.getElementById("confirm_btn").onclick = function(){
+			var ans = confirm("你点击了确认框，是否确认操作？");
+			document.getElementById("text_show").innerHTML="你选择的是"+ans;
+		};
+		document.getElementById("prompt_btn").onclick = function(){
+			var ans = prompt("请输入您的姓名");
+			document.getElementById("text_show").innerHTML = "您的输入是"+ans;
+		}
+	};
+</script>
+<title>警告框处理</title>
+</head>
+<body>
+	<p>
+		<button id="alert_btn">警告框</button>
+	</p>
+	<p>
+		<button id="confirm_btn">确认框</button>
+	</p>
+	<p>
+		<button id="prompt_btn">提示框</button>
+	</p>
+	<p id="text_show"></p>
+</body>
+</html>

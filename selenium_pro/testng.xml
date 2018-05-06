@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="liudao test-suite" >
+	<listeners>
+		<listener class-name="com.liudao.listeners.MyTestListener" />
+	</listeners>
+	<test name="liudao test-01">
+		<classes>
+			<class name="com.liudao.testdemo.Demo02" />
+		</classes>
+	</test>
+</suite>

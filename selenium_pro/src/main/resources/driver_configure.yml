@@ -1,0 +1,13 @@
+chrome:
+  driver: C:/Course/Selenium/工具/drivers/chrome/2.36/chromedriver.exe
+  port: 8001
+  options:
+    binary: C:/Program Files (x86)/Google/Chrome/Application/chrome.exe
+    acceptInsecureCerts: true
+    
+firefox:
+  driver: C:/Course/Selenium/工具/drivers/gecko/0.20.1/geckodriver.exe
+  port: 0
+  options:
+    binary: C:/Program Files/Mozilla Firefox/firefox.exe
+    acceptInsecureCerts: true
