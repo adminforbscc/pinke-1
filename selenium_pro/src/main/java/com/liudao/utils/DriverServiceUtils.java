@@ -6,10 +6,8 @@ import java.util.Map;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.BrowserType;
@@ -55,7 +53,7 @@ public class DriverServiceUtils {
 				serviceMap.put(BrowserType.CHROME, setOptions(service,options,optionsMap)); // 组合键值对存入静态map中
 			}
 			Object[] args = serviceMap.get(BrowserType.CHROME); // 从静态map中获取value部分，分别是service和options
-			driver = new ChromeDriver((ChromeDriverService)args[0],(ChromeOptions)args[1]); // 调用chromedriver的构造器，传入service参数和options参数，构造driver对象
+			driver = new LoggedChromeDriver((ChromeDriverService)args[0],(ChromeOptions)args[1]); // 调用chromedriver的构造器，传入service参数和options参数，构造driver对象
 		}else if(browserName.equalsIgnoreCase(BrowserType.FIREFOX)) { // 判断是否是火狐浏览器
 			if(!serviceMap.containsKey(BrowserType.FIREFOX)) {
 				GeckoConfig config = Configure.getConfig().getFirefox();
@@ -69,7 +67,7 @@ public class DriverServiceUtils {
 				serviceMap.put(BrowserType.FIREFOX, setOptions(service,options,optionsMap));
 			}
 			Object[] args = serviceMap.get(BrowserType.FIREFOX);
-			driver = new FirefoxDriver((GeckoDriverService)args[0],(FirefoxOptions)args[1]);
+			driver = new LoggedFirefoxDriver((GeckoDriverService)args[0],(FirefoxOptions)args[1]);
 		}else {
 			System.err.println("不支持该浏览器！");
 		}

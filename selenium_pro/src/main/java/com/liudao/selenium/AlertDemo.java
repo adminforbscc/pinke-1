@@ -10,25 +10,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AlertDemo {
 	public static void main(String[] args) {
-		WebDriver driver = MyDriverService.getDriver();
+		/*WebDriver driver = MyDriverService.getDriver();
 		driver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
 		driver.get("http://localhost/2018selenium01/alert.html");
 		
 		driver.findElement(By.id("alert_btn")).click();
 		Alert alert1 = new WebDriverWait(driver, 5L).until(ExpectedConditions.alertIsPresent());
 		//Alert alert1 = driver.switchTo().alert();
-		System.out.println("µÚÒ»¸ö¾¯¸æ¿òÉÏµÄÎÄ×ÖÊÇ£º"+alert1.getText());
+		System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+alert1.getText());
 		alert1.accept();
 		
 		driver.findElement(By.id("confirm_btn")).click();
 		Alert alert2 = driver.switchTo().alert();
-		System.out.println("µÚ¶þ¸öÈ·ÈÏ¿òÉÏµÄÎÄ×ÖÊÇ£º"+alert2.getText());
+		System.out.println("ï¿½Ú¶ï¿½ï¿½ï¿½È·ï¿½Ï¿ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+alert2.getText());
 		alert2.dismiss();
 		
 		driver.findElement(By.id("prompt_btn")).click();
 		Alert alert3 = driver.switchTo().alert();
-		System.out.println("µÚÈý¸öÌáÊ¾¿òÉÏµÄÎÄ×ÖÊÇ£º"+alert3.getText());
-		alert3.sendKeys("ÁùµÀÏÈÉú");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+alert3.getText());
+		alert3.sendKeys("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		alert3.accept();
 		
 		try {
@@ -37,6 +37,6 @@ public class AlertDemo {
 			e.printStackTrace();
 		}
 		driver.close();
-		MyDriverService.stopService();
+		MyDriverService.stopService();*/
 	}
 }
