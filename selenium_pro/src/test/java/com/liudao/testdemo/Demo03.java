@@ -43,13 +43,4 @@ public class Demo03 {
 			e.printStackTrace();
 		}
 	}
-	@Test
-	public void test2() {
-		driver.get("http://bbs.51testing.com");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
 }
